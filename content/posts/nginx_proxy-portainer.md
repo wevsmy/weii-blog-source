@@ -15,7 +15,7 @@ nginx-proxy设置一个运行nginx和docker-gen的容器。docker-gen为nginx生
 
 # portainer使用nginx-proxy配置代理添加证书
 
-## 创建一个`bridge`网络
+## 创建一个bridge网络
 ```bash
 docker network create nginx_networks
 ```
@@ -29,15 +29,15 @@ c0dbfc8d59a8        nginx_networks      bridge              local
 6e07cf9aa154        none                null                local
 ```
 
-## `nginx-proxy`配置
+## nginx-proxy配置
 采用`docker-compose`项目进行服务编排
 
-### 创建`nginx-proxy`文件夹放项目
+### 创建项目文件夹
 ```bash
 mkdir nginx-proxy
 cd nginx-proxy 
 ```
-### 创建`docker-compose.yml`文件
+### 创建项目文件
 ```yml
 version: '3'
 services:
@@ -73,7 +73,7 @@ networks:
     - `conf.d`便于自定义
     - `certs`配置SSL证书
     - *`docker.sock`*主要用于监听`docker`容器为`nginx`生成反向代理配置，并在启动和停止容器时重新加载`nginx`。
-### 启动`nginx-proxy`
+### 启动项目容器
 ```bash
 docker-compose up -d
 ```
@@ -84,17 +84,17 @@ I'm eb5b18a676c8
 ```
 会输出`jwilder/whoami`的容器`ID`
 
-## `portainer`配置
+## portainer配置
 同样是采用`docker-compose`项目进行服务编排
 
-### 创建`portainer`文件夹放项目
+### 创建项目文件夹
 ```bash
 cd ..
 mkdir portainer
 cd portainer
 ```
 
-### 创建`docker-compose.yml`文件
+### 创建项目文件
 ```yml
 version: '3'
 services:
