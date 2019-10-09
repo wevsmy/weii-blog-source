@@ -2,7 +2,7 @@
 title: "go代理设置"
 date: 2019-10-09T10:47:49+08:00
 hidden: false
-draft: true
+draft: false
 tags: [go,proxy,golang]
 keywords: [go,proxy,golang,goproxy]
 description: "go代理设置"
