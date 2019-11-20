@@ -13,8 +13,7 @@ hugo --theme=weii --baseUrl="https://blog.weii.ink/" --enableGitInfo --ignoreCac
 
 # ALL
 printf "\033[0;32mAll updates to GitHub...\033[0m\n"
-# Add changes to git.
-git pull
+
 git add .
 # Commit changes.
 msg="rebuilding site $(date)"
@@ -22,16 +21,32 @@ if [ -n "$*" ]; then
 	msg="$*"
 fi
 git commit -m "$msg"
-# Push source and build repos.
-git push origin master
+
+UPSTREAM=${1:-'@{u}'}
+LOCAL=$(git rev-parse @)
+REMOTE=$(git rev-parse "$UPSTREAM")
+BASE=$(git merge-base @ "$UPSTREAM")
+
+if [ $LOCAL = $REMOTE ]; then
+    echo "Up-to-date"
+elif [ $LOCAL = $BASE ]; then
+    echo "Need to pull"
+    # Add changes to git.
+	git pull
+elif [ $REMOTE = $BASE ]; then
+    echo "Need to push"
+	# Push source and build repos.
+	git push origin master
+else
+    echo "Diverged"
+fi
 
 
 # Public
 printf "\033[0;32mPublic updates to GitHub...\033[0m\n"
 # Go To Public folder
 cd public
-# Add changes to git.
-git pull
+
 git add .
 # Commit changes.
 msg="rebuilding site $(date)"
@@ -39,16 +54,31 @@ if [ -n "$*" ]; then
 	msg="$*"
 fi
 git commit -m "$msg"
-# Push source and build repos.
-git push origin master
+
+UPSTREAM=${1:-'@{u}'}
+LOCAL=$(git rev-parse @)
+REMOTE=$(git rev-parse "$UPSTREAM")
+BASE=$(git merge-base @ "$UPSTREAM")
+if [ $LOCAL = $REMOTE ]; then
+    echo "Up-to-date"
+elif [ $LOCAL = $BASE ]; then
+    echo "Need to pull"
+    # Add changes to git.
+	git pull
+elif [ $REMOTE = $BASE ]; then
+    echo "Need to push"
+	# Push source and build repos.
+	git push origin master
+else
+    echo "Diverged"
+fi
 
 
 # Weii Themes
 printf "\033[0;32mThemes updates to GitHub...\033[0m\n"
 # Go To Public folder
 cd ../themes/weii
-# Add changes to git.
-git pull
+
 git add .
 # Commit changes.
 msg="rebuilding site $(date)"
@@ -56,5 +86,22 @@ if [ -n "$*" ]; then
 	msg="$*"
 fi
 git commit -m "$msg"
-# Push source and build repos.
-git push origin master
+
+UPSTREAM=${1:-'@{u}'}
+LOCAL=$(git rev-parse @)
+REMOTE=$(git rev-parse "$UPSTREAM")
+BASE=$(git merge-base @ "$UPSTREAM")
+
+if [ $LOCAL = $REMOTE ]; then
+    echo "Up-to-date"
+elif [ $LOCAL = $BASE ]; then
+    echo "Need to pull"
+    # Add changes to git.
+	git pull
+elif [ $REMOTE = $BASE ]; then
+    echo "Need to push"
+	# Push source and build repos.
+	git push origin master
+else
+    echo "Diverged"
+fi
