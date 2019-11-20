@@ -13,6 +13,7 @@ hugo --theme=weii --baseUrl="https://blog.weii.ink/" --enableGitInfo --ignoreCac
 
 # ALL
 # Add changes to git.
+git pull
 git add .
 # Commit changes.
 msg="rebuilding site $(date)"
@@ -28,6 +29,7 @@ git push origin master
 # Go To Public folder
 cd public
 # Add changes to git.
+git pull
 git add .
 # Commit changes.
 msg="rebuilding site $(date)"
@@ -43,6 +45,7 @@ git push origin master
 # Go To Public folder
 cd ../themes/weii
 # Add changes to git.
+git pull
 git add .
 # Commit changes.
 msg="rebuilding site $(date)"
