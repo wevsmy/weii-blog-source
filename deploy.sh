@@ -22,23 +22,23 @@ if [ -n "$*" ]; then
 fi
 git commit -m "$msg"
 
-UPSTREAM=${1:-'@{u}'}
-LOCAL=$(git rev-parse @)
-REMOTE=$(git rev-parse "$UPSTREAM")
-BASE=$(git merge-base @ "$UPSTREAM")
+UPSTREAM1=${1:-'@{u}'}
+LOCAL1=$(git rev-parse @)
+REMOTE1=$(git rev-parse "$UPSTREAM")
+BASE1=$(git merge-base @ "$UPSTREAM")
 
-if [ $LOCAL = $REMOTE ]; then
-    echo "Up-to-date"
-elif [ $LOCAL = $BASE ]; then
-    echo "Need to pull"
+if [ $LOCAL1 = $REMOTE1 ]; then
+    printf "\033[0;32mALL Up-to-date\033[0m\n"
+elif [ $LOCAL1 = $BASE1 ]; then
+	printf "\033[0;32mALL Need to pull\033[0m\n"
     # Add changes to git.
 	git pull
-elif [ $REMOTE = $BASE ]; then
-    echo "Need to push"
+elif [ $REMOTE1 = $BASE1 ]; then
+    printf "\033[0;32mALL Need to push\033[0m\n"
 	# Push source and build repos.
 	git push origin master
 else
-    echo "Diverged"
+    printf "\033[0;32mALL Diverged\033[0m\n"
 fi
 
 
@@ -55,22 +55,22 @@ if [ -n "$*" ]; then
 fi
 git commit -m "$msg"
 
-UPSTREAM=${1:-'@{u}'}
-LOCAL=$(git rev-parse @)
-REMOTE=$(git rev-parse "$UPSTREAM")
-BASE=$(git merge-base @ "$UPSTREAM")
-if [ $LOCAL = $REMOTE ]; then
-    echo "Up-to-date"
-elif [ $LOCAL = $BASE ]; then
-    echo "Need to pull"
+UPSTREAM2=${1:-'@{u}'}
+LOCAL2=$(git rev-parse @)
+REMOTE2=$(git rev-parse "$UPSTREAM")
+BASE2=$(git merge-base @ "$UPSTREAM")
+if [ $LOCAL2 = $REMOTE2 ]; then
+    printf "\033[0;32mPublic Up-to-date\033[0m\n"
+elif [ $LOCAL2 = $BASE2 ]; then
+	printf "\033[0;32mPublic Need to pull\033[0m\n"
     # Add changes to git.
 	git pull
-elif [ $REMOTE = $BASE ]; then
-    echo "Need to push"
+elif [ $REMOTE2 = $BASE2 ]; then
+    printf "\033[0;32mPublic Need to push\033[0m\n"
 	# Push source and build repos.
 	git push origin master
 else
-    echo "Diverged"
+    printf "\033[0;32mPublic Diverged\033[0m\n"
 fi
 
 
@@ -87,21 +87,21 @@ if [ -n "$*" ]; then
 fi
 git commit -m "$msg"
 
-UPSTREAM=${1:-'@{u}'}
-LOCAL=$(git rev-parse @)
-REMOTE=$(git rev-parse "$UPSTREAM")
-BASE=$(git merge-base @ "$UPSTREAM")
+UPSTREAM3=${1:-'@{u}'}
+LOCAL3=$(git rev-parse @)
+REMOTE3=$(git rev-parse "$UPSTREAM")
+BASE3=$(git merge-base @ "$UPSTREAM")
 
-if [ $LOCAL = $REMOTE ]; then
-    echo "Up-to-date"
-elif [ $LOCAL = $BASE ]; then
-    echo "Need to pull"
+if [ $LOCAL3 = $REMOTE3 ]; then
+    printf "\033[0;32mThemes Up-to-date\033[0m\n"
+elif [ $LOCAL3 = $BASE3 ]; then
+	printf "\033[0;32mThemes Need to pull\033[0m\n"
     # Add changes to git.
 	git pull
-elif [ $REMOTE = $BASE ]; then
-    echo "Need to push"
+elif [ $REMOTE3 = $BASE3 ]; then
+    printf "\033[0;32mThemes Need to push\033[0m\n"
 	# Push source and build repos.
 	git push origin master
 else
-    echo "Diverged"
+    printf "\033[0;32mThemes Diverged\033[0m\n"
 fi
