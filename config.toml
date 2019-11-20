@@ -129,6 +129,11 @@ enableRobotsTXT = true
     tip = "╮(╯▽╰)╭"
     icon_class = "iconfont iconcode"
 [[params.weii.blogroll]]
+    name = "Symoon"
+    url = "https://simplerfroze.com"
+    tip = "O__O "
+    icon_class = "iconfont iconcode"
+[[params.weii.blogroll]]
     name = "GitHub"
     url = "https://github.com/wevsmy"
     tip = "O__O "
