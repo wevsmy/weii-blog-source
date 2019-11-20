@@ -12,6 +12,7 @@ hugo --theme=weii --baseUrl="https://blog.weii.ink/" --enableGitInfo --ignoreCac
 
 
 # ALL
+printf "\033[0;32mAll updates to GitHub...\033[0m\n"
 # Add changes to git.
 git pull
 git add .
@@ -26,6 +27,7 @@ git push origin master
 
 
 # Public
+printf "\033[0;32mPublic updates to GitHub...\033[0m\n"
 # Go To Public folder
 cd public
 # Add changes to git.
@@ -42,6 +44,7 @@ git push origin master
 
 
 # Weii Themes
+printf "\033[0;32mThemes updates to GitHub...\033[0m\n"
 # Go To Public folder
 cd ../themes/weii
 # Add changes to git.
