@@ -66,26 +66,25 @@ tags:
 
 - 改配置，指向新家
 
-  查看`/etc/systemd/system/docker.service.d`目录及`devicemapper.conf`是否存在。如果不存在，就新建
+  添加dockerd的项
 
   ```shell
-  sudo mkdir -p /etc/systemd/system/docker.service.d/
-  sudo vim /etc/systemd/system/docker.service.d/devicemapper.conf
+  sudo vim /lib/systemd/system/docker.service
   ```
-
-  `devicemapper.conf`添加如下内容：
+  把`dockerd`的启动参数添加`--graph=/home/dev/var/lib/docker`
+  修改如下内容：
 
   ```txt
   [Service]
-  ExecStart=/usr/bin/dockerd  --graph=/home/dev/var/lib/docker
+  ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --graph=/home/dev/var/lib/docker
+
   ```
   
 - 启动docker
 
   ```shell
   systemctl daemon-reload
-  systemctl restart docker
-  systemctl enable docker
+  systemctl start docker
   ```
 
 - 确认一哈

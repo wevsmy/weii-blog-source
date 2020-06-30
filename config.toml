@@ -1,6 +1,6 @@
 # 主题配置
 theme = "weii"
-baseURL = "https://blog.weii.ink"
+baseURL = "https://www.weii.xyz"
 languageCode = "zh-cn"
 # 默认分页数量
 paginate = 10

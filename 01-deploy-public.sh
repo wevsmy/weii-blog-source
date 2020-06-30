@@ -6,9 +6,8 @@ set -e
 printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 
 # Build the project.
-#hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
-#Hugo Static Site Generator v0.57.0-9B00E647 linux/amd64 BuildDate: 2019-08-14T08:06:27Z
-hugo --theme=weii --baseUrl="https://blog.weii.ink/" --enableGitInfo --ignoreCache --ignoreVendor
+#Hugo Static Site Generator v0.73.0-428907CC windows/amd64 BuildDate: 2020-06-23T16:32:10Z
+hugo --theme=weii --baseUrl="https://www.weii.xyz/" --enableGitInfo --ignoreCache --ignoreVendor --minify
 
 
 # Public
@@ -26,3 +25,5 @@ fi
 git commit -m "$msg"
 # Push source and build repos.
 git push origin master
+# Push source and build repos.
+git push coding master
