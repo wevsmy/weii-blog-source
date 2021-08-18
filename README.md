@@ -1,7 +1,8 @@
 # weii blog source
 > 博客源码
 
-博客地址: [weii.ink](https://www.weii.ink) or [weii.icu](https://www.weii.icu) or [weii.xyz](https://www.weii.xyz)
+博客地址: [weii.ink](https://www.weii.ink) or [weii.xyz](https://www.weii.xyz)
+
 
 ## 源码结构
 
@@ -20,7 +21,12 @@ weii-blog-source
 ## 调试
 
 ```bash
-hugo server --theme=weii --buildDrafts --config=themes/weii/exampleSite/config.toml --bind 0.0.0.0
+~/blog $ hugo server -D
+```
+
+## 更新主题
+```bash
+~/blog $ git submodule update --rebase --remote
 ```
 
 ## 部署
