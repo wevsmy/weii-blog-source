@@ -15,7 +15,13 @@ weii-blog-source
 ├─public           // hugo 生产的静态博客文件
 ├─static           // 博客所有文件资源
 └─themes
-   └─weii          // 博客 weii 主题 
+   └─meme          // 博客 meme 主题 
+```
+
+## 新建文章、页面
+```bash
+~/blog $ hugo new "posts/hello_world.md"
+~/blog $ hugo new "about/_index.md"
 ```
 
 ## 调试
@@ -31,7 +37,6 @@ weii-blog-source
 
 ## 部署
 ```bash
-./01-deploy-public.sh
-./02-deploy-weii.sh
-./03-deploy-source.sh
+~/blog $ ./01-deploy-public.sh
+~/blog $ ./02-deploy-source.sh
 ```

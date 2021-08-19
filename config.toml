@@ -2,7 +2,7 @@
 # 站点配置
 
 baseURL = "https://weii.xyz/"
-title = "WEII"
+title = "Weii's Blog"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
@@ -252,7 +252,8 @@ uglyURLs = false
     # 说明：对弹性布局的顶栏无效
 
     # 背景
-    headerBackground = "linear-gradient(90deg, #f795331a 0, #f370551a 15%, #ef4e7b1a 30%, #a166ab1a 44%, #5073b81a 58%, #1098ad1a 72%, #07b39b1a 86%, #6dba821a 100%)"
+    # headerBackground = "linear-gradient(90deg, #f795331a 0, #f370551a 15%, #ef4e7b1a 30%, #a166ab1a 44%, #5073b81a 58%, #1098ad1a 72%, #07b39b1a 86%, #6dba821a 100%)"
+    headerBackground = "linear-gradient(90deg, rgba(253,249,238,0.164706) 0, rgba(223,215,215,0.164706) 15%, rgba(216,202,175,0.164706) 30%, rgba(197,184,165,0.164706) 44%, rgba(134,150,167,0.164706) 58%, rgba(156,168,184,0.164706) 72%, rgba(193,203,215,0.164706) 86%, rgba(255,250,244,0.164706) 100%);"
     # 说明：https://developer.mozilla.org/zh-CN/docs/Web/CSS/background
 
     # 顶栏布局
@@ -660,13 +661,13 @@ uglyURLs = false
 
     # 说明：仅在生产环境（production）下渲染
 
-    enableGoogleAnalytics = false
+    enableGoogleAnalytics = true
 
     # 跟踪代码的类型
     trackingCodeType = "gtag"
     # 说明：gtag 或 analytics
 
-    trackingID = ""
+    trackingID = "UA-146915278-1"
 
 
     ######################################
@@ -1199,10 +1200,10 @@ uglyURLs = false
     enableBackToTopAutoHide = true
 
     # 是否在首页显示
-    displayBackToTopInHome = true
+    displayBackToTopInHome = false
 
     # 是否在移动端显示
-    displayBackToTopOnMobile = false
+    displayBackToTopOnMobile = true
 
     # 按钮图标
     backToTopIcon = "arrow-up"
@@ -1218,7 +1219,7 @@ uglyURLs = false
     displayFooter = true
 
     # 是否在首页显示
-    displayFooterInHome = true
+    displayFooterInHome = false
 
     displayCopyleftSymbol = false
     # 是否显示版权符号（©）
@@ -1241,7 +1242,7 @@ uglyURLs = false
     displaySiteCopyright = true
 
     # 自定义页脚（支持 Markdown）
-    customFooter = ""
+    customFooter = "🤨"
 
     displayBusuanziSiteUVAndPV = false
     busuanziSiteUVText = "本站访客数"

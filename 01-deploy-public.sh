@@ -15,7 +15,7 @@ printf "\033[0;32mPublic updates to GitHub...\033[0m\n"
 # Go To Public folder
 cd public
 
-git pull
+#git pull
 git add .
 # Commit changes.
 msg="rebuilding site $(date)"
