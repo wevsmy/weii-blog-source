@@ -2,7 +2,7 @@
 title: "利用wireguard内网穿透"
 date: 2021-07-13T15:40:58+08:00
 hidden: false
-draft: true
+draft: false
 tags: ["wireguard","linux","network","docker",]
 keywords: ["wireguard","linux","wg","network","nat","docker","docker-compose",]
 description: ""

@@ -2,7 +2,7 @@
 title: "win10 wsl2 端口转发到宿主机"
 date: 2019-11-15T15:12:59+08:00
 hidden: false
-draft: true
+draft: false
 tags: ["win10","wls2","笔记","network",]
 keywords: ["win10","wls2","端口转发","network",]
 description: ""

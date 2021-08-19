@@ -2,7 +2,7 @@
 title: "利用wireguard内网穿透并用nginx反代"
 date: 2021-07-17T15:49:42+08:00
 hidden: false
-draft: true
+draft: false
 tags: ["wireguard","linux","network","docker","nginx",]
 keywords: ["wireguard","linux","wg","network","nat","docker","docker-compose","nginx",]
 description: ""

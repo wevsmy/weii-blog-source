@@ -2,7 +2,7 @@
 title: "端口转发"
 date: 2020-03-19T15:23:33+08:00
 hidden: false
-draft: true
+draft: false
 tags: ["socat","linux","ssh","network",]
 keywords: ["socat","linux","ssh","network",]
 description: ""
