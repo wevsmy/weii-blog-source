@@ -316,3 +316,7 @@ root@ubuntu20-04:~#
 |cpuacct|统计`CPU`使用情况|
 |memory |限制内存的使用上限|
 |blkio |对块设备的`IO`进行限制|
+
+{{< notice tip >}}
+23333
+{{< /notice >}}
