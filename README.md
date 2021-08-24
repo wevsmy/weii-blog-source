@@ -30,6 +30,12 @@ weii-blog-source
 ~/blog $ hugo server -D
 ```
 
+## 生产调试
+
+```bash
+~/blog $ hugo server -D --renderToDisk --environment production
+```
+
 ## 更新主题
 ```bash
 ~/blog $ git submodule update --rebase --remote
