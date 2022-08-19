@@ -1,3 +1,3 @@
 User-agent: *
 Disallow: /uploads/
-Sitemap: https://weii.xyz/sitemap.xml
+Sitemap: https://weii.ink/sitemap.xml

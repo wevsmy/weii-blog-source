@@ -1,7 +1,7 @@
 # weii blog source
 > 博客源码
 
-博客地址: [weii.ink](https://www.weii.ink) or [weii.xyz](https://www.weii.xyz)
+博客地址: [weii.ink](https://www.weii.ink)
 
 
 ## 源码结构
@@ -24,21 +24,27 @@ weii-blog-source
 ~/blog $ hugo new "about/_index.md"
 ```
 
+## 安装
+
+```bash
+~/blog $ pnpm install --shamefully-hoist
+```
+
 ## 调试
 
 ```bash
-~/blog $ hugo server -D
+~/blog $ pnpm run dev
 ```
 
-## 生产调试
+## 预览
 
 ```bash
-~/blog $ hugo server -D --renderToDisk --environment production
+~/blog $ pnpm run preview
 ```
 
 ## 更新主题
 ```bash
-~/blog $ git submodule update --rebase --remote
+~/blog $ pnpm run theme
 ```
 
 ## 部署

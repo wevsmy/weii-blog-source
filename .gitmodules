@@ -3,4 +3,4 @@
 	url = https://github.com/reuixiy/hugo-theme-meme.git
 [submodule "themes/hugo-notice"]
 	path = themes/hugo-notice
-	url = https://github.com.cnpmjs.org/martignoni/hugo-notice.git
+	url = https://github.com/martignoni/hugo-notice.git

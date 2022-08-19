@@ -1,7 +1,7 @@
 ##########################################
 # 站点配置
 
-baseURL = "https://weii.xyz/"
+baseURL = "https://weii.ink/"
 title = "Weii's Blog"
 languageCode = "zh-CN"
 hasCJKLanguage = true
@@ -105,7 +105,7 @@ uglyURLs = false
     # 头像
     avatar = "/icons/apple-touch-icon.png"
     # 网站（默认值：baseURL）
-    website = "https://weii.xyz/"
+    website = "https://weii.ink/"
     # 推特
     twitter = "wevsmy"
 
