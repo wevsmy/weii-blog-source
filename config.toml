@@ -155,7 +155,7 @@ uglyURLs = false
 [outputs]
     page = ["HTML"]
     # home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex", "Algolia"]
-    home = ["HTML", "SectionsAtom", "SectionsRSS"]
+    home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex"]
     section = ["HTML"]
     taxonomy = ["HTML"]
     term = ["HTML"]
@@ -190,12 +190,12 @@ uglyURLs = false
 
 [menu]
     ## 菜单栏
-    # [[menu.main]]
-    #     url = "/"
-    #     name = "首页"
-    #     weight = 1
-    #     pre = "internal"
-    #     post = "home"
+    [[menu.main]]
+        url = "/"
+        name = "首页"
+        weight = 1
+        pre = "internal"
+        post = "home"
     [[menu.main]]
         url = "/posts/"
         name = "文章"
@@ -1366,9 +1366,9 @@ uglyURLs = false
 
     enableAlgoliaSearch = false
 
-    algoliaAppId = ""
-    algoliaApiKey = ""
-    algoliaIndexName = ""
+    algoliaAppId = "D50FTX7MWN"
+    algoliaApiKey = "aac81eb2a860ff81b6d1e71702c2d46a"
+    algoliaIndexName = "weii-blog"
     # 说明：https://www.algolia.com/
 
 
