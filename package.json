@@ -7,7 +7,7 @@
     "server": "hugo server -D",
     "preview": "hugo server -D --renderToDisk --environment production",
     "build": "hugo --gc --minify --cleanDestinationDir && gulp build",
-    "theme": "git submodule update --rebase --remote"
+    "update": "git submodule update --rebase --remote"
   },
   "repository": {
     "type": "git",
