@@ -7,6 +7,5 @@
 *.iml
 out
 gen
-layouts
 resources
 node_modules
