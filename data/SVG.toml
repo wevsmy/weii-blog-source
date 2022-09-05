@@ -5,6 +5,7 @@ brand = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.146 26.458" cla
 home = '<span class="icon">🛖</span>'
 archive = '<span class="icon">📝</span>'
 tags = '<span class="icon">🔖</span>'
+webstack = '<span class="icon">🚀</span>'
 user-circle = '<span class="icon">🙈</span>'
 
 sun = '<span class="icon">🌚</span>'
