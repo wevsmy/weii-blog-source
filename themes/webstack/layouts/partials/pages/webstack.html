@@ -2,7 +2,7 @@
  * @Author: wilson.wu
  * @Date: 2022-08-31 16:44:32
  * @LastEditors: wilson.wu
- * @LastEditTime: 2022-09-05 14:22:53
+ * @LastEditTime: 2022-09-05 15:16:17
  * @FilePath: \weii-blog-source\themes\webstack\layouts\partials\pages\webstack.html
  * @Description: 
  * Contact: wevsmy@gamil.com
@@ -17,12 +17,14 @@
 {{ $bundle := slice ($scss) ($css) | resources.Concat "css/webstack.bundle.css" | postCSS (dict "config"
 "./assets/css/postcss.config.js") }}
 
-{{ if .Site.IsServer }}
-<link rel="stylesheet" href="{{ $bundle.RelPermalink }}">
-{{ else }}
-{{ $bundle := $bundle | minify | fingerprint | resources.PostProcess }}
-<link rel="stylesheet" href="{{ $bundle.Permalink }}" integrity="{{ $bundle.Data.Integrity }}">
-{{ end }}
+{{- $style := $bundle | resources.Minify -}}
+{{- if .Site.Params.enableFingerprint -}}
+{{- $style = $style | resources.Fingerprint -}}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" {{- if .Site.Params.enableSRI }}
+    integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" {{- end -}} />
+{{- else -}}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+{{- end -}}
 
 <!-- HTML -->
 <main class="main list" id="main">
