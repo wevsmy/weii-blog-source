@@ -20,7 +20,7 @@
           url: https://nginx.nas.local.weii.icu
           description: 吹就完事🤪
         - title: jellyfin
-          logo: https://jellyfin.org/docs/images/favicon.png
+          logo: https://jellyfin.org/images/favicon.ico
           url: https://jellyfin.nas.local.weii.icu
           description: jellyfin媒体服务
         - title: qbittorrent

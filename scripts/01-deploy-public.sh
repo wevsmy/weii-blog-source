@@ -13,6 +13,8 @@ npm run build
 # Public
 printf "\033[0;32mPublic updates to GitHub...\033[0m\n"
 # Go To Public folder
+cp -r ./public.git/.git ./public/
+
 cd public
 
 #git pull

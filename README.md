@@ -3,9 +3,7 @@
 
 博客地址: [weii.ink](https://www.weii.ink)
 
-
 ## 源码结构
-
 ```text
 weii-blog-source
 ├─archetypes
@@ -17,38 +15,36 @@ weii-blog-source
 └─themes
    └─meme          // 博客 meme 主题 
 ```
-
 ## 新建文章、页面
 ```bash
 ~/blog $ hugo new "posts/hello_world.md"
 ~/blog $ hugo new "about/_index.md"
 ```
-
 ## 安装
-
 ```bash
-~/blog $ pnpm install --shamefully-hoist
+pnpm run init
 ```
-
 ## 调试
-
 ```bash
-~/blog $ pnpm run dev
+pnpm run dev
 ```
-
 ## 预览
-
 ```bash
-~/blog $ pnpm run preview
+pnpm run preview
 ```
-
+## 编译
+```bash
+pnpm run build
+```
 ## 更新主题
 ```bash
-~/blog $ pnpm run theme
+pnpm run update
 ```
-
 ## 部署
 ```bash
-~/blog $ ./01-deploy-public.sh
-~/blog $ ./02-deploy-source.sh
+pnpm run deploy
+```
+## 源码
+```bash
+pnpm run deploy
 ```
